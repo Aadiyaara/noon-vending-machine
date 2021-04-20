@@ -81,7 +81,8 @@ def home():
 
 
 @app.route('/create_admin', methods=['POST'])
-def add_admin():
+@token_required
+def add_admin(current_user):
     admin_data = request.get_json()
 
     if 'name' not in admin_data:
@@ -166,7 +167,8 @@ def login():
 
 
 @app.route('/create_item', methods=['POST'])
-def add_item():
+@token_required
+def add_item(current_user):
     item_data = request.form
     item_image = None
 
@@ -192,7 +194,8 @@ def add_item():
 
 
 @app.route('/update_item', methods=['POST'])
-def update_item():
+@token_required
+def update_item(current_user):
     item_data = request.get_json()
     item_image = None
 
