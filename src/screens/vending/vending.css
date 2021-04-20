@@ -1,0 +1,7 @@
+.Vending-Box {
+    font-size: 4rem;
+    background-color: red;
+    border: 1px, solid, black;
+    height: 70vh;
+    width: 100vw - 20vh;
+}
